@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus With Me</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 🎥 Background Video -->
+    <div class="video-container">
+        <video id="bg-video" autoplay muted loop playsinline></video>
+    </div>
+
+    <!-- 🔲 Main Content Area -->
+    <div class="content">
+        <h1>Focus With Me</h1>
+
+        <!-- ⚙️ Settings Icon -->
+        <div class="settings-icon" onclick="openSettings()" title="Timer Settings">
+            ⚙️
+        </div>
+
+        <!-- ⏳ Pomodoro Timer Controls -->
+        <div class="timer">
+            <div class="mode-selector">
+                <button class="mode active" onclick="setMode('pomodoro')">Pomodoro</button>
+                <button class="mode" onclick="setMode('short')">Short Break</button>
+                <button class="mode" onclick="setMode('long')">Long Break</button>
+            </div>
+
+            <h2 id="time">25:00</h2>
+
+            <div class="controls">
+                <button id="startPause" onclick="startPauseTimer()">Start</button>
+                <button onclick="resetTimer()">Reset</button>
+            </div>
+        </div>
+
+        <!-- ✅ To-Do List Section -->
+        <div class="todo-container">
+            <input type="text" id="taskInput" placeholder="Enter a task...">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="taskList" class="todo-list"></ul>
+        </div>
+
+        <!-- 🎵 Spotify Placeholder -->
+        <button class="spotify-btn" onclick="connectSpotify()">Connect to Spotify</button>
+    </div>
+
+    <!-- ⚙️ Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSettings()">&times;</span>
+            <h2>Timer Settings</h2>
+            <label for="pomodoroTime">Pomodoro (mins):</label>
+            <input type="number" id="pomodoroTime" value="25" min="1" max="60">
+            <label for="shortBreakTime">Short Break (mins):</label>
+            <input type="number" id="shortBreakTime" value="5" min="1" max="30">
+            <label for="longBreakTime">Long Break (mins):</label>
+            <input type="number" id="longBreakTime" value="10" min="1" max="60">
+            <button onclick="saveSettings()">Save</button>
+        </div>
+    </div>
+
+    <!-- 🔔 Alarm Sound -->
+    <audio id="alarmSound" src="alarm.wav"></audio>
+
+    <!-- 👣 Footer -->
+    <footer class="footer-custom">
+        <p>&copy; <span id="year"></span> <strong>Manas Prabhu</strong>. All Rights Reserved.</p>
+    </footer>
+
+    <!-- 📜 Scripts -->
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
+</body>
+</html>
