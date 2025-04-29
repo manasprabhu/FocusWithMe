@@ -1,22 +1,27 @@
-*🎧 Focus With Me*
+# 🎧 Focus With Me
 
-A minimal web application that helps you focus by playing your top Spotify tracks or personalized playlists. Built using the Spotify Web API and modern JavaScript.
+**Focus With Me** is a minimal web application designed to help you stay focused by playing your top Spotify tracks or personalized playlists. Built using the Spotify Web API and modern JavaScript, this app integrates Spotify authentication, playlist creation, and playback.
 
-🚀 Features
-- Spotify authentication and integration
-- Fetch and display user's top tracks
-- Automatically create a focused playlist
-- Embed and play Spotify playlists directly
-- Clean and responsive user interface
+## 🚀 Features
 
-🛠️ Tech Stack
-- HTML, CSS, JavaScript
-- Spotify Web API
-- GitHub Pages (for hosting)
+- **Spotify Authentication**: Sign in using your Spotify account.
+- **Top Tracks**: Fetch and display your top Spotify tracks.
+- **Personalized Playlist**: Automatically create a playlist based on your preferences.
+- **Spotify Embed Player**: Play your Spotify playlists directly within the app.
+- **Responsive UI**: Clean, user-friendly interface suitable for all devices.
 
-📦 Installation
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML, CSS, JavaScript
+- **Spotify Web API**: For fetching top tracks and creating playlists
+- **GitHub Pages**: For hosting the application
+
+## 📦 Installation
+
+To run this project locally:
+
 1. Clone the repository:
-   git clone https://github.com/manasprabhu/FocusWithMe.git
+git clone https://github.com/manasprabhu/FocusWithMe.git
    cd FocusWithMe
 
 2. Open the index.html file directly in your browser 
