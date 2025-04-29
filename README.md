@@ -1,4 +1,4 @@
-🎧 Focus With Me
+*🎧 Focus With Me*
 
 A minimal web application that helps you focus by playing your top Spotify tracks or personalized playlists. Built using the Spotify Web API and modern JavaScript.
 
